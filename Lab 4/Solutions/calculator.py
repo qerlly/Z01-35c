@@ -25,7 +25,7 @@ class Node:
         self.symbol_type = symbol_type
         self.value = value
         self.children = []
-     
+
     def __str__(self, level=0):
         ret = "\t"*level+repr(self.value)+"\n"
         for child in self.children:
@@ -129,7 +129,7 @@ def compute(node):
     operation = operations[node.symbol_type]
     return operation(left_result, right_result)
 
-    
+
 if __name__ == '__main__':
     #tree = parser.parse(sys.argv[1])
     tree = parse('(1+7)*(9+2)')
